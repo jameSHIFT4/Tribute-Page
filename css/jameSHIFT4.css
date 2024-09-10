@@ -1,0 +1,57 @@
+/*
+ * <span class="jame"><a href="https://github.com/jameSHIFT4">jame<span class="shift4">SHIFT4</span></a></span>
+ */
+
+:root {
+  --TEXTCOLOR: 26, 26, 26;
+}
+
+.jame a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.jame,
+.shift4 {
+  position: relative;
+  display: inline-block;
+}
+
+.shift4::first-letter {
+  color: transparent;
+}
+
+.shift4::before {
+  content: "S";
+  position: absolute;
+  color: rgb(var(--TEXTCOLOR));
+}
+
+.shift4::after {
+  content: "$";
+  position: absolute;
+  color: transparent;
+  left: 0;
+}
+
+.shift4,
+.shift4::before,
+.shift4::after {
+  transition: color 0.5s ease;
+}
+
+.jame:hover .shift4 {
+  color: rgba(var(--TEXTCOLOR), 0.25);
+}
+
+.jame:hover .shift4::before {
+  color: transparent;
+}
+
+.jame:hover .shift4::after {
+  color: rgb(var(--TEXTCOLOR));
+}
+
+.jame:active .shift4::after {
+  color: gold;
+}
